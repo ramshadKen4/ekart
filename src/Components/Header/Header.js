@@ -14,6 +14,7 @@ function Header() {
                             <div class="top_bar_content ml-auto">
                                 <div class="top_bar_menu">
                                     <ul class="standard_dropdown top_bar_dropdown">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <li className='top_bar_menu_location'>
                                             Locations
                                         </li>
@@ -56,6 +57,7 @@ function Header() {
 
 
                         <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                            
                             <div class="header_search">
                                 <div class="header_search_content">
                                     <div class="header_search_form_container">
@@ -114,6 +116,7 @@ function Header() {
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -158,7 +161,7 @@ function Header() {
                                         <li><a href="">Music</a></li>
                                         <li><a href="">Hobbies Games</a></li>
                                         <li><a href="">Toys</a></li>
-                                        <li><a href="">Kids</a></li>
+                                        <li><a href="">Kid</a></li>
 
                                     </ul>
                                 </div>

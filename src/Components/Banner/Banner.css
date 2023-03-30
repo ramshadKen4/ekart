@@ -1,0 +1,11 @@
+.carousel-cell {
+    width: 100%;
+}
+.carousel-cell img{
+    width: 90%;
+    height: 360px;
+    margin-right: 10px;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+}
+
