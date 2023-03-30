@@ -1,6 +1,6 @@
 
 body {
-	color: #fff;
+	color: #927777;
 	background: #19aa8d;
 	font-family: 'Roboto', sans-serif;
 }
@@ -60,7 +60,7 @@ body {
 	background: #179b81 !important;
 }
 .signup-form a {
-	color: #fff;	
+	color: #19aa8d;	
 	text-decoration: underline;
 }
 .signup-form a:hover {

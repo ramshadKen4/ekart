@@ -15,7 +15,9 @@ body {
 }
 .signup-form {
 	width: 400px;
+    margin-top: 10;
 	margin: 0 auto;
+
 	padding: 30px 0;		
 }
 .signup-form form {
@@ -60,7 +62,7 @@ body {
 	background: #179b81 !important;
 }
 .signup-form a {
-	color: #fff;	
+	color: #19aa8d;	
 	text-decoration: underline;
 }
 .signup-form a:hover {

@@ -3,15 +3,14 @@ import './App.css';
 import Home from './Components/Home/Home';
 import Signup from './Components/Signup/Signup';
 import Login from './Components/Login/Login';
+import Header from './Components/Header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div>
-        </div>
-      </header>
+    <div className='App'>
+      <div className='App-header'>
+      <Header />
+      </div>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
