@@ -9,18 +9,13 @@ function Header() {
                 <div class="container">
                     <div class="row">
                         <div class="col d-flex flex-row">
-                            <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png" alt="" /></div>+91 9823 132 111</div>
-                            <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt="" /></div><a href="mailto:fastsales@gmail.com">contact@bbbootstrap.com</a></div>
+                            <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png" alt="" /></div>+221 33 66 22</div>
+                            <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt="" /></div><a href="mailto:fastsales@gmail.com">support@elecxtra.io</a></div>
                             <div class="top_bar_content ml-auto">
                                 <div class="top_bar_menu">
                                     <ul class="standard_dropdown top_bar_dropdown">
-                                        <li>
-                                            <a href="#">English<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li><a href="#">Italian</a></li>
-                                                <li><a href="#">Spanish</a></li>
-                                                <li><a href="#">Japanese</a></li>
-                                            </ul>
+                                        <li className='top_bar_menu_location'>
+                                            Locations
                                         </li>
                                         <li>
                                             <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
@@ -30,12 +25,15 @@ function Header() {
                                                 <li><a href="#">JPY Japanese Yen</a></li>
                                             </ul>
                                         </li>
+                                        <li>
+                                            <a href="#">En<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li><a href="#">Italian</a></li>
+                                                <li><a href="#">Spanish</a></li>
+                                                <li><a href="#">Japanese</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
-                                </div>
-                                <div class="top_bar_user">
-                                    <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt="" /></div>
-                                    <div><a href="/signup">Register</a></div>
-                                    <div><a href="/login">Sign in</a></div>
                                 </div>
                             </div>
                         </div>
@@ -91,8 +89,8 @@ function Header() {
                                     <div class="wishlist_icon">
                                         <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918681/heart.png" alt="" /></div>
                                     <div class="wishlist_content">
-                                        <div class="wishlist_text"><a href="#">Wishlist</a></div>
-                                        <div class="wishlist_count">10</div>
+                                        <div class="wishlist_text"><a href="#"></a></div>
+                                        <div class="wishlist_count"></div>
                                     </div>
                                 </div>
 
@@ -104,8 +102,15 @@ function Header() {
                                             <div class="cart_count"><span>3</span></div>
                                         </div>
                                         <div class="cart_content">
-                                            <div class="cart_text"><a href="#">Cart</a></div>
-                                            <div class="cart_price">$185</div>
+                                            <div class="cart_text"><a href="#"></a></div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user">
+                                    <div class="user_container d-flex flex-row align-items-center justify-content-end">
+                                        <div class="user_icon">
+                                        <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -127,9 +132,8 @@ function Header() {
 
                                 <div class="main_nav_menu">
                                     <ul class="standard_dropdown main_nav_dropdown">
-                                        <li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
                                         <li class="hassubs">
-                                            <a href="#">Laptop<i class="fas fa-chevron-down"></i></a>
+                                            <a href="#">All Categories<i class="fas fa-chevron-down"></i></a>
                                             <ul>
                                                 <li>
                                                     <a href="#">Lenovo<i class="fas fa-chevron-down"></i></a>
@@ -144,36 +148,18 @@ function Header() {
                                                 <li><a href="#">HP<i class="fas fa-chevron-down"></i></a></li>
                                             </ul>
                                         </li>
-                                        <li class="hassubs">
-                                            <a href="#">Featured Brands<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li>
-                                                    <a href="#">APPLE<i class="fas fa-chevron-down"></i></a>
-                                                    <ul>
-                                                        <li><a href="#">Laptop<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Mobiles<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Ipads<i class="fas fa-chevron-down"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Samsung<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">Lenovo<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">DELL<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hassubs">
-                                            <a href="#">Pages<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="">Books</a></li>
+                                        <li><a href="">Electronics</a></li>
+                                        <li><a href="">Real Estate</a></li>
+                                        <li><a href="">Cars-Bikes</a></li>
+                                        <li><a href="">Dorm-Furniture</a></li>
+                                        <li><a href="">Men</a></li>
+                                        <li><a href="">Woman</a></li>
+                                        <li><a href="">Music</a></li>
+                                        <li><a href="">Hobbies Games</a></li>
+                                        <li><a href="">Toys</a></li>
+                                        <li><a href="">Kids</a></li>
+
                                     </ul>
                                 </div>
 
