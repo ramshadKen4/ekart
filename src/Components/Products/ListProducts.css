@@ -1,0 +1,19 @@
+
+.list_container {
+    flex-wrap: wrap;
+    margin: 10px 30px;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-item {
+    flex-basis: calc(20% - 10px); /* 5 columns with 10px spacing */
+    margin: 5px; /* spacing between items */
+  }
+  .container_title h3{
+    margin-top: 90px;
+    text-align: start;
+  }
