@@ -51,7 +51,7 @@ function Header() {
                         {/* logo */}
                         <div class="col-lg-2 col-sm-3 col-3 order-1">
                             <div class="logo_container">
-                                <div class="logo"><a href="#">BBB</a></div>
+                                <div class="logo"><img src='/svg/logo.svg'></img></div>
                             </div>
                         </div>
 
