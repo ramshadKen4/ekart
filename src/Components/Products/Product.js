@@ -1,24 +1,43 @@
-import React from 'react'
+import React, {useContext, useEffect, useState } from 'react'
 import './Product.css'
-function Product() {
+import Firebase from '../../config/firebase'
+import { AuthContext } from '../../store/Context'
+import { useNavigate } from 'react-router-dom';
+function Product(props) {
+    const navigate = useNavigate();
+    const { user, setUser } = useContext(AuthContext)
+    async function cartHandler() {
+        if(!user){
+            navigate('/login')
+        }
+        else {
+            const itemList = {car:1,jeep:12}
+            Firebase.firestore().collection('cart').add({
+                user:user.displayName,
+                item:itemList
+            }).catch()
+            let cart = await (await Firebase.firestore().collection('cart').where('user','==',user.displayName).get()).docs();
+            console.log(cart.docs)
+        }
+    }
     return (
         <div>
             <section class="product">
                 <div class="product__photo">
                     <div class="photo-container">
                         <div class="photo-main">
-                            <img src="https://png.pngtree.com/element_our/png/20181129/vector-illustration-of-fresh-red-apple-with-single-leaf-png_248312.jpg" alt="green apple slice" />
+                            <img src={props.children && props.children.image} alt="product image appears here " />
                         </div>
 
                     </div>
                 </div>
                 <div class="product__info">
                     <div class="title">
-                        <h1>Delicious Apples and take</h1>
+                        <h1>{props.children && props.children.title}</h1>
                     </div>
                     <div className='bottom'>
                         <div class="price">
-                            <span>$ 7.93</span>
+                            <span>$ {props.children && props.children.price}</span>
                         </div>
                         <div class="reviews">
                             <ul class="stars">
@@ -28,9 +47,9 @@ function Product() {
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star-o"></i></li>
                             </ul>
-                            <span>(64)</span>
+                            <span>({props.children&& props.children.review})</span>
                         </div>
-                        <button class="buy--btn">ADD TO CART</button>
+                        <button onClick={cartHandler} class="buy--btn">ADD TO CART</button>
                     </div>
                 </div>
             </section>

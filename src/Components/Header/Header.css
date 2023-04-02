@@ -317,9 +317,11 @@ section {
 
 .top_bar_menu {
 	display: inline-block;
+	position: relative;
+	right: 80px;
 }
 
-.top_bar_menu_location{
+.top_bar_menu_location {
 	color: #FFFFFF;
 	font-size: 16px;
 	font-weight: 400;
@@ -329,22 +331,23 @@ section {
 .top_bar_dropdown li {
 	padding-left: 13px;
 	padding-right: 13px;
+	text-align: left;
 }
 
 .standard_dropdown li {
 	display: inline-block;
 	position: relative;
-	height: 56px;
+	left: 400;
 }
 
 .standard_dropdown li li {
 	display: block;
-	width: 100%;
+	width: auto;
 }
 
 .standard_dropdown li li a {
 	display: block;
-	width: 100%;
+	width: auto;
 	border-bottom: solid 1px #f2f2f2;
 	font-size: 16px;
 }
@@ -357,6 +360,7 @@ section {
 	display: inline-block;
 	margin-left: 5px;
 }
+
 
 .standard_dropdown li a {
 	display: block;
@@ -391,7 +395,6 @@ section {
 	display: block;
 	position: absolute;
 	top: 120%;
-	left: 0;
 	width: auto;
 	visibility: hidden;
 	opacity: 0;
@@ -415,7 +418,16 @@ section {
 	left: 100%;
 	top: 0 !important;
 }
-
+.user_icon{
+	position: relative;
+	right: 5px;
+	top: 4px;
+	margin-left: 12px;
+	margin-right: 15px;
+}
+.logout {
+	cursor: pointer;
+}
 .top_bar_user {
 	display: inline-block;
 	margin-left: 35px;
@@ -812,6 +824,18 @@ select option {
 
 .user_content {
 	margin-left: 28px;
+}
+
+.classified_button button {
+	border-radius: 12px;
+	border: none;
+	background-color: #00c6d7;
+	box-shadow: 0 11px 27px rgba(0, 198, 215, 0.35);
+	width: 164px;
+	height: 70px;
+	color: #FFFFFF;
+
+
 }
 
 /*********************************
@@ -1407,5 +1431,3 @@ select option {
 	}
 
 }
-
-

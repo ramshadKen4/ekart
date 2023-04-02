@@ -52,22 +52,22 @@ body {
 .signup-form .btn, .signup-form .btn:active {        
 	font-size: 16px;
 	font-weight: bold;
-	background: #19aa8d !important;
+	background: #3187ED !important;
 	border: none;
 	min-width: 140px;
 }
 .signup-form .btn:hover, .signup-form .btn:focus {
-	background: #179b81 !important;
+	background: #006ff7 !important;
 }
 .signup-form a {
-	color: #19aa8d;	
+	color: #126fe0;	
 	text-decoration: underline;
 }
 .signup-form a:hover {
 	text-decoration: none;
 }
 .signup-form form a {
-	color: #19aa8d;
+	color: #3187ED;
 	text-decoration: none;
 }	
 .signup-form form a:hover {

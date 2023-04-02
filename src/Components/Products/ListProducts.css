@@ -1,4 +1,6 @@
-
+body {
+  background: #fff;
+}
 .list_container {
     flex-wrap: wrap;
     margin: 10px 30px;
