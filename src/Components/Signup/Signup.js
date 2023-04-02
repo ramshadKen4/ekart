@@ -17,7 +17,8 @@ function Signup() {
         Firebase.firestore().collection('user').add({
           uId: userCredential.user.uid,
           name: username,
-          email: email
+          email: email,
+          cart:''
         }).catch((error) => {
           console.log(error.message)
         })

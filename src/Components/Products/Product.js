@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Product.css'
 import Firebase from '../../config/firebase'
 import { AuthContext } from '../../store/Context'
@@ -6,18 +6,24 @@ import { useNavigate } from 'react-router-dom';
 function Product(props) {
     const navigate = useNavigate();
     const { user, setUser } = useContext(AuthContext)
+    if (props.children) {
+        var productTitle = props.children.title;
+    }
     async function cartHandler() {
-        if(!user){
+        if (!user) {
             navigate('/login')
         }
         else {
-            const itemList = {car:1,jeep:12}
-            Firebase.firestore().collection('cart').add({
-                user:user.displayName,
-                item:itemList
-            }).catch()
-            let cart = await (await Firebase.firestore().collection('cart').where('user','==',user.displayName).get()).docs();
-            console.log(cart.docs)
+            Firebase.firestore().collection("user").where("uId", "==", user.uid)
+            .get().then(function (querySnapshot) {
+                const cart = querySnapshot.docs[0].data().cart;
+
+                let obj = {...cart}
+                const currentCartCount = cart[productTitle];
+                console.log(cart[productTitle])
+                    obj[productTitle] = currentCartCount ? currentCartCount+1 : 1;
+                    querySnapshot.docs[0].ref.update({ cart: obj})
+                })
         }
     }
     return (
@@ -47,7 +53,7 @@ function Product(props) {
                                 <li><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star-o"></i></li>
                             </ul>
-                            <span>({props.children&& props.children.review})</span>
+                            <span>({props.children && props.children.review})</span>
                         </div>
                         <button onClick={cartHandler} class="buy--btn">ADD TO CART</button>
                     </div>
