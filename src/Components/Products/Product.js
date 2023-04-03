@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext} from 'react'
 import './Product.css'
 import Firebase from '../../config/firebase'
 import { AuthContext } from '../../store/Context'
@@ -15,14 +15,13 @@ function Product(props) {
         }
         else {
             Firebase.firestore().collection("user").where("uId", "==", user.uid)
-            .get().then(function (querySnapshot) {
-                const cart = querySnapshot.docs[0].data().cart;
+                .get().then(function (querySnapshot) {
+                    const cart = querySnapshot.docs[0].data().cart;
 
-                let obj = {...cart}
-                const currentCartCount = cart[productTitle];
-                console.log(cart[productTitle])
-                    obj[productTitle] = currentCartCount ? currentCartCount+1 : 1;
-                    querySnapshot.docs[0].ref.update({ cart: obj})
+                    let obj = { ...cart }
+                    const currentCartCount = cart[productTitle];
+                    obj[productTitle] = currentCartCount ? currentCartCount + 1 : 1;
+                    querySnapshot.docs[0].ref.update({ cart: obj })
                 })
         }
     }
@@ -45,6 +44,7 @@ function Product(props) {
                         <div class="price">
                             <span>$ {props.children && props.children.price}</span>
                         </div>
+                        <span class="spec">Available Stock : {props.children && props.children.stock}</span>
                         <div class="reviews">
                             <ul class="stars">
                                 <li><i class="fa fa-star"></i></li>

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './Components/Home/Home';
 import Signup from './Components/Signup/Signup';
@@ -18,7 +17,7 @@ function App() {
     Firebase.auth().onAuthStateChanged((user) => {
       setUser(user)
     })
-  }, [])
+  })
   return (
     <div className='App'>
       <BrowserRouter>
@@ -27,7 +26,7 @@ function App() {
       </div>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={user? <Home/>:<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart></Cart>} />
         </Routes>

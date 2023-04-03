@@ -1,4 +1,3 @@
-
 /* ----- Product Section ----- */
 .product {
     display: grid;
@@ -8,10 +7,12 @@
     min-width: 60px;
     background-color: white;
 }
+
 /* ----- Photo Section ----- */
 .product__photo {
     position: relative;
 }
+
 .photo-container {
     position: absolute;
     left: 4em;
@@ -41,15 +42,18 @@
     font-size: 16px;
     font-weight: 200;
 }
+
 .price {
     text-align: left;
     color: #3187ED;
     font-size: 24px;
 }
-.price span{
-    padding-right:12px;
+
+.price span {
+    padding-right: 12px;
     margin-top: 10px;
 }
+
 .buy--btn {
     padding: 1.5em 3.1em;
     margin: 20px 2px;
@@ -63,6 +67,7 @@
     box-shadow: 2px 2px 25px -7px #4c4c4c;
     cursor: pointer;
 }
+
 .buy--btn:active {
     transform: scale(0.97);
 }
@@ -73,16 +78,23 @@
     padding: 0;
     color: #3187ED;
 }
-.reviews .stars > li {
+
+.reviews .stars>li {
     display: inline-block;
-    margin-left:4px;
+    margin-left: 4px;
 }
-.reviews > span {
+
+.reviews>span {
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #555;
 }
+
 .bottom {
     position: relative;
     top: 2.5em;
+}
+
+.spec {
+    font-size: 11px;
 }

@@ -4,9 +4,9 @@ import Item from './Item'
 import Firebase from '../../config/firebase'
 import { AuthContext } from '../../store/Context'
 function Cart() {
-    const [cart,setCart] = useState(0);
+    const [cart, setCart] = useState(0);
     const [cartItem, setCartItem] = useState(0);
-    const { user, setUser } = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     useEffect(() => {
         if (!user) return;
         Firebase.firestore().collection("user").where("uId", "==", user.uid)
@@ -26,54 +26,30 @@ function Cart() {
                         <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><a href='/'><span class="ml-2">Continue Shopping</span></a></div>
                         <hr />
                         <h6 class="mb-0">Shopping cart</h6>
-                        <div class="d-flex justify-content-between"><span>You have 4 items in your cart</span>
+                        <div>
+                        </div>
+                        <div class="d-flex justify-content-between"><span>You have {cartItem.length <= 1 ? cartItem.length + ' item' : cartItem.length + ' items'} in your cart</span>
                             <div class="d-flex flex-row align-items-center"><span class="text-black-50">Sort by:</span>
                                 <div class="price ml-2"><span class="mr-1">price</span><i class="fa fa-angle-down"></i></div>
                             </div>
                         </div>
                         {
-                            
                             cartItem && cartItem.map((product) => {
-                                return <Item>{[product,cart[product]]}</Item>
+                                return <Item>{[product, cart[product]]}</Item>
                             })
                         }
-                        <Item></Item>
-                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                            <div class="d-flex flex-row"><img class="rounded" src="https://i.imgur.com/QRwjbm5.jpg" width="40" />
-                                <div class="ml-2"><span class="font-weight-bold d-block">Iphone 11 pro</span><span class="spec">256GB, Navy Blue</span></div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span class="d-block ml-5 font-weight-bold">$900</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                            <div class="d-flex flex-row"><img class="rounded" src="https://i.imgur.com/GQnIUfs.jpg" width="40" />
-                                <div class="ml-2"><span class="font-weight-bold d-block">One pro 7T</span><span class="spec">256GB, Navy Blue</span></div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span class="d-block ml-5 font-weight-bold">$900</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                            <div class="d-flex flex-row"><img class="rounded" src="https://i.imgur.com/o2fKskJ.jpg" width="40" />
-                                <div class="ml-2"><span class="font-weight-bold d-block">Google pixel 4 XL</span><span class="spec">256GB, Axe black</span></div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$800</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                            <div class="d-flex flex-row"><img class="rounded" src="https://i.imgur.com/Tja5H1c.jpg" width="40" />
-                                <div class="ml-2"><span class="font-weight-bold d-block">Samsung galaxy Note 10&nbsp;</span><span class="spec">256GB, Navy Blue</span></div>
-                            </div>
-                            <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$999</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="payment-info">
-                        <div class="d-flex justify-content-between align-items-center"><span>Card details</span><img class="rounded" src="https://i.imgur.com/WU501C8.jpg" width="30" /></div><span class="type d-block mt-3 mb-1">Card type</span><label class="radio"> <input type="radio" name="card" value="payment" checked /> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
+                        <div class="d-flex justify-content-between align-items-center"><span>Card details</span><img class="rounded" src="https://i.imgur.com/WU501C8.jpg" width="30" alt=''/></div><span class="type d-block mt-3 mb-1">Card type</span><label class="radio"> <input type="radio" name="card" value="payment" checked /> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
 
-                        <label class="radio"> <input type="radio" name="card" value="payment" /> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
+                        <label class="radio"> <input type="radio" name="card" value="payment" /> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" alt=''/></span> </label>
 
-                        <label class="radio"> <input type="radio" name="card" value="payment" /> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png" /></span> </label>
+                        <label class="radio"> <input type="radio" name="card" value="payment" /> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png" alt=''/></span> </label>
 
 
-                        <label class="radio"> <input type="radio" name="card" value="payment" /> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png" /></span> </label>
+                        <label class="radio"> <input type="radio" name="card" value="payment" /> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png" alt=''/></span> </label>
                         <div><label class="credit-card-label">Name on card</label><input type="text" class="form-control credit-inputs" placeholder="Name" /></div>
                         <div><label class="credit-card-label">Card number</label><input type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000" /></div>
                         <div class="row">

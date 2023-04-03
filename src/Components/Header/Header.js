@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
-import { Button } from 'react-bootstrap'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Header.css';
 import { AuthContext } from '../../store/Context';
 import Firebase from '../../config/firebase';
@@ -8,7 +7,6 @@ import Firebase from '../../config/firebase';
 function Header() {
     let userIconList;
     const { user, setUser } = useContext(AuthContext)
-    console.log(user)
     if (!user) {
         userIconList =
             <ul>
@@ -106,7 +104,7 @@ function Header() {
                                 <div class="cart">
                                     <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                         <div class="cart_icon">
-                                            <a href='/cart' ><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt="" /></a>
+                                            <Link to={'cart'}><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt="" /></Link>
                                             <div class="cart_count"><span>3</span></div>
                                         </div>
                                         <div class="cart_content">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './ListProducts.css'
-import { Col, Container, Row } from 'react-bootstrap'
 import Product from './Product'
 import Firebase from '../../config/firebase'
 
@@ -31,21 +30,6 @@ function ListProducts() {
 
 
                 }
-                <div class="flex-item">
-                    <Product>sadasd</Product>
-                </div>
-                <div class="flex-item">
-                    <Product></Product>
-                </div>
-                <div class="flex-item">
-                    <Product></Product>
-                </div>
-                <div class="flex-item">
-                    <Product></Product>
-                </div>
-                <div class="flex-item">
-                    <Product></Product>
-                </div>
             </div>
         </div>
 
