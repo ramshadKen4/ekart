@@ -6,12 +6,12 @@ import "firebase/compat/storage";
 
 // its  dumb and fake data replace with orginal firebase config files 
 const firebaseConfig = {
-  apiKey: "AIzaSyD0pjTfXfTjDC88P1fTuWpWbg7t6INX2KY",
-  authDomain: "ekart-6ef16.firebaseapp.com",
-  projectId: "ekart-6ef16",
-  storageBucket: "ekart-6ef16.appspot.com",
-  messagingSenderId: "710530319329",
-  appId: "1:710530319329:web:61cd6af90a8d2e49c648a0"
-}
+  apiKey: "AIzaSyCj6bYfjhvAa7oZpn1LAD5hnnINF6Z9qeA",
+  authDomain: "showpingkart.firebaseapp.com",
+  projectId: "showpingkart",
+  storageBucket: "showpingkart.appspot.com",
+  messagingSenderId: "483419608950",
+  appId: "1:483419608950:web:de1573d4f9e8d15b0f0c57"
+};
 // Initialize Firebase
 export default firebase.initializeApp(firebaseConfig);

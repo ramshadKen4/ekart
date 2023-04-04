@@ -54,24 +54,6 @@
     margin-top: 10px;
 }
 
-.buy--btn {
-    padding: 1.5em 3.1em;
-    margin: 20px 2px;
-    border: none;
-    border-radius: 7px;
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #fff;
-    background-color: #3187ED;
-    box-shadow: 2px 2px 25px -7px #4c4c4c;
-    cursor: pointer;
-}
-
-.buy--btn:active {
-    transform: scale(0.97);
-}
-
 .reviews .stars {
     display: inline-block;
     list-style: none;

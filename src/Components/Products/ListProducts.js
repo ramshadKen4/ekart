@@ -12,7 +12,7 @@ function ListProducts() {
             })
             setProductsList(products)
         })
-    }, [productList])
+    }, [])
     return (
         <div class="list_container">
             <div className='container_title'>
